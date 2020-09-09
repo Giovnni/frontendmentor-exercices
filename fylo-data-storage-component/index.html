@@ -5,27 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <div class="module-container">
+    <div class="first-module-container">
+      <div class="logo-container">
+        <img class="fylo-logo" src="./images/logo.svg" alt="Fylo Logo">
+      </div>
+      <div class="buttons-container">
+        <a class="button-icon" href="#">
+          <img src="./images/icon-document.svg" alt="Document Button Icon">
+        </a>
+        <a class="button-icon" href="#">
+          <img src="./images/icon-folder.svg" alt="Folder Button Icon">
+        </a>
+        <a class="button-icon" href="#">
+          <img src="./images/icon-upload.svg" alt="Upload Button Icon">
+        </a>
+      </div>
+    </div>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
+    <div class="second-module-container">
+      <div class="data-left-container">
+        <p id="data-number-left">185</p>
+        <p>GB Left</p>
+      </div>
+      <p class="data-used-text">You’ve used <strong>815</strong> GB of your storage</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+        <p id="minimum-data">0 GB</p>
+        <p id="maximum-data">1000 GB</p>
+      </div>
+    </div>
+    <img class="background-font" src="./images/bg-desktop.png">
   
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.giovanni-haddadi.com/">Giovanni HADDADI</a>
+    </div>
   </div>
+  
 </body>
 </html>
