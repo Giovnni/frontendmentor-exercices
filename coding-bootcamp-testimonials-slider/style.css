@@ -60,6 +60,10 @@ body {
     right: 50%;
 }
 
+.test {
+    overflow: hidden;
+}
+
 .background-picture {
     position: absolute;
     width: 550px;
@@ -68,13 +72,13 @@ body {
     z-index: -1;
 }
 
+#john-picture {
+    display: none;
+}
+
 .client-picture {
     /*box-shadow: 0px 9px 20px 0px hsl(240, 18%, 77%);*/
     width: 80%;
-}
-
-#john-picture {
-    display: none;
 }
 
 .button-container {
@@ -147,11 +151,11 @@ body {
 
 @keyframes slideInRight {
     from {
-        visibility: hidden;
+        display: none;
         transform: translate(0, -150%);
     }
     to {
-        visibility: visible;
+        display: inline;
         transform: translate(0, 0);
     }
 }
@@ -176,11 +180,11 @@ body {
 
 @keyframes slideInLeft {
     from {
-        visibility: hidden;
+        display: none;
         transform: translate(0, 150%);
     }
     to {
-        visibility: visible;
+        display: inline;
         transform: translate(0, 0);
     }
 }
