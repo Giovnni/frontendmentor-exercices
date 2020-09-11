@@ -14,10 +14,6 @@ body {
     margin: 0 auto;
 }
 
-#testimonial2 {
-    display: none;
-}
-
 .testimonial-container {
     position: absolute;
     width: 40em;
@@ -26,6 +22,11 @@ body {
     left: 55%;
     color: hsl(240, 38%, 20%);
     z-index: 1;
+    overflow: hidden;
+}
+
+#testimonial2 {
+    top: 0;
 }
 
 #pattern-quotes {
@@ -94,7 +95,7 @@ body {
 }
 
 .button-container button:hover {
-    background: lightgrey;
+    background: #FAF8FF;
 }
 
 .button-container button:nth-child(1)
@@ -124,4 +125,62 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+.rightOut {
+    animation-name: slideOutRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideOutRight {
+    to {         
+        transform: translate(0%, 150%);
+    }
+}
+
+.rightIn {
+    animation-name: slideInRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        visibility: hidden;
+        transform: translate(0, -150%);
+    }
+    to {
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+}
+
+.leftOut {
+    animation-name: slideOutLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideOutLeft {
+    to {         
+        transform: translate(0%, -150%);
+    }
+}
+
+.leftIn {
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        visibility: hidden;
+        transform: translate(0, 150%);
+    }
+    to {
+        visibility: visible;
+        transform: translate(0, 0);
+    }
 }
