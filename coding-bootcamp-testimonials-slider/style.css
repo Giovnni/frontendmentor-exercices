@@ -61,6 +61,11 @@ body {
 }
 
 .test {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     overflow: hidden;
 }
 
@@ -72,13 +77,14 @@ body {
     z-index: -1;
 }
 
-#john-picture {
-    display: none;
+#tanya-picture {
+    z-index: 0;
 }
 
 .client-picture {
     /*box-shadow: 0px 9px 20px 0px hsl(240, 18%, 77%);*/
     width: 80%;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 .button-container {
