@@ -29,7 +29,7 @@ p {
 .article-container {
     display: flex;
     width: 735px;
-    height: 260px;
+    height: 280px;
     border-radius: 10px;
     background: white;
     box-shadow: 0px 0px 72px 3px rgba(224,224,224,1);
@@ -107,7 +107,7 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    transform: translate(calc(50% - 15px), -50%);
+    transform: translate(calc(50% - 52.5px), -50%);
     right: 0;
     top: 0;
     border-radius: 10px;
@@ -152,7 +152,7 @@ p {
 
 .active {
     transition-duration: 0.5s;
-    transform: translate(calc(50% - 15px), -100%);
+    transform: translate(calc(50% - 52.5px), -100%);
     opacity: 1;
 }
 

@@ -15,12 +15,19 @@ body {
     overflow: hidden;
 }
 
-.module-container {
+.page {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+.module-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
 }
 
 .first-module-container {
@@ -66,7 +73,7 @@ body {
 .second-module-container {
     background: hsl(228, 56%, 26%);
     border-radius: 10px;
-    width: 30%;
+    width: 450px;
     height: fit-content;
     position: relative;
     padding: 30px;
@@ -165,9 +172,10 @@ body {
 .background-font {
     position: absolute;
     z-index: -1;
-    bottom: -10%;
+    bottom: 0;
     right: 0;
     width: 100%;
+    height: 50%;
 }
 
 .attribution { 
@@ -179,4 +187,57 @@ body {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media all and (max-width: 831px) {
+    body {
+        background: url(./images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .background-font {
+        display: none;
+    }
+
+    .module-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-module-container, .second-module-container {
+        margin: 15px 0;
+    }
+
+    .second-module-container {
+        padding-bottom: 65px;
+    }
+
+    .data-used-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .data-left-container {
+        bottom: 0;
+        left: 0;
+        transform: translate(100%, 50%);
+        top: unset;
+        right: unset;
+    }
+
+    .data-left-container::after {
+        visibility: hidden;
+    }
+}
+
+@media all and (max-width: 476px) {
+    .second-module-container {
+        width: 90%;
+    }
+
+    .data-left-container {
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+    }
 }
